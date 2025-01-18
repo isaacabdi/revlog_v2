@@ -1,0 +1,14 @@
+
+aws instance
+- linux 2 aws instance with the default free tier settings
+- considerations
+
+- ssh key authenication, basic security feature that prevents unauthorized ssh access to the instance with the use of private key credentials, 
+
+- Restricted inbound access to the instance, modify the security group to only accept inbound traffic from whitelisted ip addresses, on port 22, and port 5000
+
+- alerts and monitors, used aws cloudwatch, to monitor the total cost of my aws billing across my instances, and send an alert if it goes over a certain dollar threshhold
+it would then trigger a lambda function to stop the instance.
+
+the ec2 instance essentially functions as the server the flask api is hosted on,
+while our local python script, acts as the client, simulating the process of making requests to the Flask API
